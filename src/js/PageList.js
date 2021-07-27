@@ -1,4 +1,4 @@
-const PageList = (argument = "") => {
+const pageList = (argument = "") => {
   const preparePage = () => {
     let cleanedArgument = argument.replace(/\s+/g, "-");
     let articles = "";
@@ -41,4 +41,4 @@ const PageList = (argument = "") => {
   render();
 };
 
-export default pagelist;
+export default pageList;

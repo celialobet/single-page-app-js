@@ -1,3 +1,20 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+input {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 $color-red: rgb(255, 20, 20);
 
 p {
