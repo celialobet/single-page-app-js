@@ -40,3 +40,5 @@ const PageList = (argument = "") => {
 
   render();
 };
+
+export default pagelist;

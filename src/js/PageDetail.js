@@ -37,3 +37,5 @@ const PageDetail = (argument) => {
 
   render();
 };
+
+export default pagedetail;

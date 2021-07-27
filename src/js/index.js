@@ -1,3 +1,6 @@
+import "../sass/styles.scss";
+import routes from "./routes";
+
 let pageArgument;
 
 const setRoute = () => {
