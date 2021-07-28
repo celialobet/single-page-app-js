@@ -1,8 +1,9 @@
+import home from "./Home";
 import pageDetail from "./PageDetail";
 import pageList from "./PageList";
 
 const routes = {
-  "": pageList,
+  "": home,
   pagelist: pageList,
   pagedetail: pageDetail,
 };
