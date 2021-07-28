@@ -1,9 +1,9 @@
-const PageDetail = (argument) => {
+const pageDetail = (argument) => {
   const preparePage = () => {
     let cleanedArgument = argument.replace(/\s+/g, "-");
 
     const fetchGame = (url, argument) => {
-      let finalURL = url + argument;
+      let finalURL = `${url}?key=${process.env.API_KEY}`;
 
       fetch(`${finalURL}`)
         .then((response) => response.json())
@@ -22,6 +22,7 @@ const PageDetail = (argument) => {
   };
 
   const render = () => {
+    let pageContent = document.getElementById("pageContent");
     pageContent.innerHTML = `
       <section class="page-detail">
         <div class="article">
@@ -38,4 +39,4 @@ const PageDetail = (argument) => {
   render();
 };
 
-export default pagedetail;
+export default pageDetail;

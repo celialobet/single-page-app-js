@@ -1,10 +1,10 @@
-import pagedetail from "./PageDetail";
-import pagelist from "./PageList";
+import pageDetail from "./PageDetail";
+import pageList from "./PageList";
 
 const routes = {
-  "": Home,
-  pagelist: PageList,
-  pagedetail: PageDetail,
+  "": pageList,
+  pagelist: pageList,
+  pagedetail: pageDetail,
 };
 
 export default routes;

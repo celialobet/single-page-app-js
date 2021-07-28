@@ -6,7 +6,9 @@ const pageList = (argument = "") => {
     const fetchList = (url, argument) => {
       let finalURL = url;
       if (argument) {
-        finalURL = url + "&search=" + argument;
+        finalURL = `${url}&search=${argument}&page_size=27`;
+      } else {
+        finalURL = `${url}&dates=2022-01-01,2022-12-31&page_size=27`;
       }
 
       fetch(`${finalURL}`)
@@ -25,10 +27,14 @@ const pageList = (argument = "") => {
         });
     };
 
-    fetchList("https://api.rawg.io/api/games", cleanedArgument);
+    fetchList(
+      `https://api.rawg.io/api/games?key=${process.env.API_KEY}`,
+      cleanedArgument
+    );
   };
 
   const render = () => {
+    let pageContent = document.getElementById("pageContent");
     pageContent.innerHTML = `
       <section class="page-list">
         <div class="articles">...loading</div>

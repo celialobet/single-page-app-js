@@ -75,4 +75,5 @@ module.exports = {
     new Dotenv(),
   ],
   mode: "development",
+  watch: true,
 };
